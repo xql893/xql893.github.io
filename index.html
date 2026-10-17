@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>网络收音机</title>
+  <meta name="theme-color" content="#0f1020">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="hls.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="app-bar">
+    <div class="logo">📻 网络收音机</div>
+    <div class="src-note">源：RadioBrowser（与 moOde 同源）</div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="top" class="active">热门</button>
+    <button data-tab="search">搜索</button>
+    <button data-tab="fav">收藏</button>
+  </nav>
+
+  <section id="searchPanel" class="search-panel hidden">
+    <input id="q" type="search" placeholder="搜索电台名称…" autocomplete="off" enterkeyhint="search">
+    <div class="chips" id="langChips"></div>
+    <div class="chips" id="countryChips"></div>
+    <div class="chips" id="tagChips"></div>
+    <button id="searchBtn" class="primary">搜索</button>
+  </section>
+
+  <main id="results" class="results"></main>
+
+  <div id="player" class="player hidden">
+    <img id="pIcon" class="p-icon" alt="">
+    <div class="p-meta">
+      <div id="pName" class="p-name"></div>
+      <div id="pSub" class="p-sub"></div>
+    </div>
+    <button id="pToggle" class="p-btn">⏸</button>
+    <input id="pVol" class="p-vol" type="range" min="0" max="1" step="0.01" value="1" aria-label="音量">
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+</body>
+</html>

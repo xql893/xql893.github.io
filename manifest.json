@@ -1,0 +1,15 @@
+{
+  "name": "网络收音机 · Radio",
+  "short_name": "收音机",
+  "description": "基于 RadioBrowser 的网络收音机，与 moOde 同源的电台库",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1020",
+  "theme_color": "#0f1020",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
